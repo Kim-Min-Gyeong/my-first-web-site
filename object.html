@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Object</h1>
+        <script>
+            var coworkers = {"prgrammer" : "taeyong", "designer" : "jaehyun"};
+            document.write("programmer: " + coworkers.prgrammer + "<br>");
+            document.write("designer: " + coworkers.designer + "<br>");
+            coworkers.bookkeeper = "doyoung"; /* bookeeper는 객체 coworkers에 소속된 변수로 property*/
+            document.write("bookkeeper: " + coworkers.bookkeeper + "<br>");
+            coworkers["data scientist"] = "mark"
+            document.write("data scientist: " + coworkers["data scientist"] + "<br>");
+        </script>
+
+        <h2>iterate</h2>
+        <script>
+            for(var key in coworkers)
+                document.write(key+ ": " + coworkers[key] + '<br>');
+        </script>
+
+        <h2>property & method</h2>
+        <script>
+            coworkers.showAll = function() /* 함수 정의 방법(function showAll(){}과 같은 효과) */
+            {
+                for(var key in this) /* coworkers라는 변수 명이 바뀌어도 this를 사용하면 바뀐 이름으로 적용됨 */
+                    document.write(key+ ": " + this[key] + '<br>');
+            }
+            coworkers.showAll(); /*showAll은 객체 coworkers에 소속된 함수로 method*/
+        </script>
+    </body>
+</html>

@@ -4,10 +4,13 @@
         <title>WEB1 - HTML</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css"> <!-- style.css 파일을 다운 받아 이 웹 페이지에 적용 -->
+        <script src="colors.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
 
     <body>
         <h1><a href="index.html">WEB</a></h1>
+        <input id="night_day" type="button" value="night" onclick="night_day_handler(this)"> <!-- night_day_handler 함수 호출 -->
         <div id="grid">
             <ol>
                 <li><a href="1.html">HTML</a></li>
