@@ -9,6 +9,10 @@ h1{
     padding:20px;
     
 }
+#grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
 #grid ol{
     border-right: 1px solid gray;
     width: 100px;
